@@ -1,0 +1,10 @@
+services:
+    Sengped_Dab:
+      image: postgres:latest
+      container_name: Sengped_Dab
+      ports:
+        - "${DAB_PORT}:5432"
+      environment:
+        POSTGRES_USER: ${DAB_USER}
+        POSTGRES_PASSWORD: ${DAB_PASS}
+        POSTGRES_DB: ${DAB_NAME}
