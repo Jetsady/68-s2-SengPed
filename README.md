@@ -1,6 +1,6 @@
 # 68-s2-SengPed
 
-## Member Group
+## All Member Group
   -  Jetsadaporn Chanwises
   -  Peerapol Seelalo
   -  Saranpat Perdchan
