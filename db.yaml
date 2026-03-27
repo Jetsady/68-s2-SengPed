@@ -8,3 +8,8 @@ services:
         POSTGRES_USER: ${DAB_USER}
         POSTGRES_PASSWORD: ${DAB_PASS}
         POSTGRES_DB: ${DAB_NAME}
+      healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
