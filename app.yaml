@@ -3,7 +3,7 @@ services:
     image: prawee/strapi:latest
     container_name: Sengped_App
     depends_on:
-      s2db:
+      Sengped_Dab:
         condition: service_healthy
     environment:
       DATABASE_CLIENT: postgres
