@@ -2,6 +2,9 @@ services:
   Sengped_app:
     image: prawee/strapi:latest
     container_name: Sengped_App
+    depends_on:
+      s2db:
+        condition: service_healthy
     environment:
       DATABASE_CLIENT: postgres
       DATABASE_HOST: ${DAB_HOST}
@@ -10,4 +13,4 @@ services:
       DATABASE_USERNAME: ${DAB_USER}
       DATABASE_PASSWORD: ${DAB_PASS}
     ports:
-      - ${APP_PORT}:1337
+      - ${APP_PORT}:${STRAPI_PORT}
