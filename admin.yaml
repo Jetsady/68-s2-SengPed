@@ -3,7 +3,7 @@ services:
       image: dpage/pgadmin4
       container_name: Sengped_Admin
       ports:
-        - ${ADMIN_PORT}:80
+        - ${ADMIN_PORT}:20
       environment:
         PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
         PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASS}
