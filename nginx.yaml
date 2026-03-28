@@ -6,6 +6,6 @@ services:
     depends_on:
       - Sengped_app
     ports:
-      - "${NGINX_PORT:-80}:20"
+      - "${NGINX_PORT:-80}:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
